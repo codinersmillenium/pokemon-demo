@@ -4,7 +4,7 @@ const API_BASE = 'https://pokeapi.co/api/v2'
 const cache = new Map<number, Pokemon>()
 
 export async function fetchPokemonList(offset = 0, limit = 10): Promise<Pokemon[]> {
-  limit = (offset === 150) ? 1 : limit
+  limit = (offset > 149) ? 1 : limit
   const res = await fetch(`${API_BASE}/pokemon?offset=${offset}&limit=${limit}`)
   const data = await res.json()
 
