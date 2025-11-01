@@ -9,7 +9,6 @@ export function usePokemon() {
   const totalPokemons = 151
   const pageSize = 10
   const selectedPokemon = ref<Pokemon | null>(null)
-  selectedPokemon.value
   const showModal = ref(false)
   const isLoading = ref(false)
 
